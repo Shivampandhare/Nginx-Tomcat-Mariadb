@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-deployment2
+  name: my-deployment3
   labels:
     app: nginx
 spec:
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: shivampandhare/mobile-page:1
+        image: shivampandhare/desktop-page:1
         ports:
         - containerPort: 80
 ...
@@ -25,7 +25,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-service2
+  name: my-service3
 spec:
   type: NodePort
   selector:
@@ -33,5 +33,5 @@ spec:
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 30001
+      nodePort: 30002
 ...
