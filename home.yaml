@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: shivampandhare/home-page:1
+        image: shivampandhare/home-page:latest
         ports:
         - containerPort: 80
 ...
