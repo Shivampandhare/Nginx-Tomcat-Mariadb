@@ -1,0 +1,15 @@
+##install helm 
+ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+ chmod 700 get_helm.sh
+ ./get_helm.sh
+ 
+---------------------------------------------------------------------------------------------------------------------------------------------
+##install ingress vai helm 
+helm install my-release oci://ghcr.io/nginxinc/charts/nginx-ingress --version 1.1.2
+---------------------------------------------------------------------------------------------------------------------------------------------
+match ingressClassName with ingress pod class name 
+to check ingressClassName run kubectl describe pods 
+--------------------------------------------------------------------------------------------------------------------------------------------
+add ingress svc loadbalncer in ingress rule :
+example:
+host: load balancer of ingress controller
